@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.aohuan.jinghai_lifee"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    /** 注解                   */
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    compile files('libs/MobLogCollector.jar')
+    compile files('libs/MobTools.jar')
+    compile files('libs/ShareSDK-Core-2.6.3.jar')
+    compile files('libs/ShareSDK-QQ-2.6.3.jar')
+    compile files('libs/ShareSDK-QZone-2.6.3.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.6.3.jar')
+    compile files('libs/Baidu-Frontia-Android-2.0.2.jar')
+    compile files('libs/mta-sdk-1.0.0.jar')
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/open_sdk.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/android-async-http-1.4.4.jar')
+    compile files('libs/jackson-all-1.8.5.jar')
+}
